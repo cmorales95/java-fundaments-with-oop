@@ -8,10 +8,17 @@ public class Main {
         System.out.println(myDoctor.name);
 
         Patient patient = new Patient("Alejandra", "alejandra@gmail.com");
-        patient.setWeight(54.6);
-        System.out.println(patient.getWeight());
+        Patient patient2 = new Patient("Linda", "gata@gmail.com");
 
-        patient.setPhoneNumber("123456789");
-        System.out.println(patient.getPhoneNumber());
+        System.out.println(patient.getName());
+        System.out.println(patient2.getName());
+        patient2 = patient;
+
+        System.out.println(patient.getName());
+        System.out.println(patient2.getName());
+
+        patient2.setName("Charlie");
+        System.out.println(patient.getName());
+        System.out.println(patient2.getName());
     }
 }
