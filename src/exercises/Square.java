@@ -1,3 +1,5 @@
+package exercises;
+
 public class Square extends Shape {
     Square(float size) {
         super(size, 0);

@@ -1,3 +1,5 @@
+package exercises;
+
 public class Rectangle extends Shape {
     Rectangle(float width, float height) {
         super(width, height);

@@ -1,3 +1,5 @@
+package exercises;
+
 public class Triangle extends Shape {
     Triangle(float base, float height) {
         super(base, height);

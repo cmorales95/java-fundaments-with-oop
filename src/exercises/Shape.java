@@ -1,3 +1,5 @@
+package exercises;
+
 abstract class Shape {
     private final float width;
     private final float height;
@@ -11,11 +13,11 @@ abstract class Shape {
 
     protected abstract void printArea();
 
-    public final float getWidth() {
+    final float getWidth() {
         return this.width;
     }
 
-    public final float getHeight() {
+    final float getHeight() {
         return this.height;
     }
 }
