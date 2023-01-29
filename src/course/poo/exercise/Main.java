@@ -15,6 +15,7 @@ public class Main {
 
         Patient patient = new Patient("Alejandra", "aleja@gmail.com");
         System.out.println(patient.getName());
+        System.out.println(patient);
 
 
     }
