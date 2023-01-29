@@ -3,34 +3,16 @@ package course.poo.exercise;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Doctor {
-    private static int id = 0; //Autoincrement
-    private String name;
+public class Doctor extends User {
     private String speciality;
 
-
-
-    Doctor() {
-        System.out.println("Running executor");
-    }
-
-    Doctor(String name, String speciality) {
-        System.out.println("the name of the doctor is: " + name);
-        this.name = name;
+    Doctor(String name, String email, String speciality) {
+        super(name, email);
         this.speciality = speciality;
-        id++;
-    }
-
-    public void showID() {
-        System.out.println("ID Doctor" + id);
-    }
-
-    // behaviors
-    public void showName() {
-        System.out.println(name);
     }
 
     ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
+
     public void addAvailableAppointment(Date date, String time) {
         availableAppointments.add(new Doctor.AvailableAppointment(date, time));
     }
@@ -41,6 +23,8 @@ public class Doctor {
 
     public static class AvailableAppointment {
         private int id;
+        private String email;
+        private String address;
         private Date date;
         private String time;
 
@@ -74,27 +58,12 @@ public class Doctor {
         }
     }
 
-    public static int getId() {
-        return id;
-    }
-
-    public static void setId(int id) {
-        Doctor.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getSpeciality() {
         return speciality;
     }
 
     public void setSpeciality(String speciality) {
         this.speciality = speciality;
+
     }
 }
