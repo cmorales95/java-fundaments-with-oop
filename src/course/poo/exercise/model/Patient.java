@@ -9,6 +9,12 @@ public class Patient extends User {
         super(name, email);
     }
 
+    @Override
+    public void showDataUser() {
+        System.out.println("Paciente\n");
+        System.out.println("Historial completo desde nacimiento\n");
+    }
+
     public String getBirthday() {
         return birthday;
     }
