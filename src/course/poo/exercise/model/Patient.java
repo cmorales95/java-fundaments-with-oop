@@ -1,11 +1,11 @@
-package course.poo.exercise;
+package course.poo.exercise.model;
 
 public class Patient extends User {
     private String birthday;
     private String blood;
     private double weight, height;
 
-    Patient(String name, String email) {
+    public Patient(String name, String email) {
         super(name, email);
     }
 

@@ -1,4 +1,4 @@
-package course.poo.exercise;
+package course.poo.exercise.model;
 
 public class User {
     private int id;

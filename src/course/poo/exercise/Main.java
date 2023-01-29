@@ -1,5 +1,8 @@
 package course.poo.exercise;
 
+import course.poo.exercise.model.Doctor;
+import course.poo.exercise.model.Patient;
+
 import java.util.Date;
 
 public class Main {
