@@ -1,24 +1,16 @@
 package course.poo.exercise;
 
+import java.util.Date;
+
 public class Main {
     public static void main(String[] args) {
-//        UIMenu.showMenu();
+        Doctor myDoctor = new Doctor("Cristian Morales", "Generalist");
+        myDoctor.addAvailableAppointment(new Date(), "4pm");
+        myDoctor.addAvailableAppointment(new Date(), "10pm");
+        myDoctor.addAvailableAppointment(new Date(), "1pm");
 
-        Doctor myDoctor = new Doctor("don Giovanni", "Generalist");
-        System.out.println(myDoctor.name);
-
-        Patient patient = new Patient("Alejandra", "alejandra@gmail.com");
-        Patient patient2 = new Patient("Linda", "gata@gmail.com");
-
-        System.out.println(patient.getName());
-        System.out.println(patient2.getName());
-        patient2 = patient;
-
-        System.out.println(patient.getName());
-        System.out.println(patient2.getName());
-
-        patient2.setName("Charlie");
-        System.out.println(patient.getName());
-        System.out.println(patient2.getName());
+        for (Doctor.AvailableAppointment availableAppointment : myDoctor.getAvailableAppointments()) {
+            System.out.println(availableAppointment.getDate() + " " + availableAppointment.getTime());
+        }
     }
 }
