@@ -19,26 +19,25 @@ public class UIMenu {
         do {
             System.out.println("1. Doctor");
             System.out.println("2. Patient");
-            System.out.println("0. Salir");
+            System.out.println("0. Exit");
 
             Scanner sc = new Scanner(System.in);
-            response = Integer.valueOf(sc.nextLine());
+            response = Integer.parseInt(sc.nextLine());
 
-            switch (response){
-                case 1:
+            switch (response) {
+                case 1 -> {
                     System.out.println("Doctor");
                     authUser(1);
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     response = 0;
                     authUser(2);
-
-                    break;
-                case 0:
+                }
+                case 0 -> {
                     System.out.println("Thank you for you visit");
                     return;
-                default:
-                    System.out.println("Please select a correct answer");
+                }
+                default -> System.out.println("Please select a correct answer");
             }
         }while (response != 0);
     }
@@ -77,6 +76,7 @@ public class UIMenu {
                     if (p.getEmail().equals(email)) {
                         emailCorrect = true;
                         patientLogged = p;
+                        UIPatientMenu.showPatientMenu();
                     }
                 }
             }
@@ -84,31 +84,4 @@ public class UIMenu {
 
         } while (!emailCorrect);
     }
-
-    static void showPatientMenu(){
-        int response = 0;
-        do {
-            System.out.println("\n\n");
-            System.out.println("Patient");
-            System.out.println("1. Book an appointment");
-            System.out.println("2. My appointments");
-            System.out.println("0. Return");
-
-            Scanner sc = new Scanner(System.in);
-            response = Integer.valueOf(sc.nextLine());
-
-            switch (response){
-                case 1:
-                    System.out.println("::Book an appointment");
-                    break;
-                case 2:
-                    System.out.println("::My appointments");
-                    break;
-                case 0:
-                    showMenu();
-                    break;
-            }
-        }while (response != 0);
-    }
-
 }
